@@ -1,0 +1,34 @@
+//draw--------------
+    var imageView: ImageView? = null
+    var bitmap: Bitmap? = null
+    var canvas: Canvas? = null
+    var paint: Paint? = null
+    var downx = 0f
+    var downy:kotlin.Float = 0f
+    var upx:kotlin.Float = 0f
+    var upy:kotlin.Float = 0f
+//--------------------------
+ //draw-----------
+        imageView = findViewById<View>(R.id.imgView) as ImageView
+
+        val currentDisplay: Display = windowManager.defaultDisplay
+        val dw: Int = currentDisplay.getWidth()
+        val dh: Int = currentDisplay.getHeight()
+
+        bitmap = Bitmap.createBitmap(dw.toInt(), dh.toInt(),
+                Bitmap.Config.ARGB_8888)
+        //canvas = Canvas(bitmap)
+        paint = Paint()
+        paint!!.color = Color.GREEN
+        imageView!!.setImageBitmap(bitmap)
+
+        //imageView!!.setOnTouchListener(this)
+
+//-------------------------
+//draw------------------------------
+            val action = event.action
+            //-------------------------
+ //draw---------
+                    downx = event.getX();
+                    downy = event.getY();
+                    //draw-----------------
